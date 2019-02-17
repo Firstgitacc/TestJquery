@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+            $('input[type="radio"]').on('change',function(){ 
+				var inputValue = $(this).attr("value");
+				alert(inputValue);
+				if(inputValue == "Yes"){
+					$("#text1").hide();
+				}
+				if(inputValue == "1"){
+					$("#text1").show();
+				}
+				if(inputValue == "Y"){
+					$("#text8").hide();
+				}
+            })
+ $('#selectval').on('change', function() {
+      if ( this.value == 'ss1')     
+      {
+        $("#text5").hide();
+        $("#text3").hide();
+      }
+	        if ( this.value == 'ss2')     
+      {
+        $("#text5").show();
+        $("#text3").show();
+      }
+	  
+});
+      });
+</script>
+</head>
+<body>
+
+<input type="text" placeholder="text1" id ="text1"/></br>
+<input type="text" placeholder="text2" id ="text2"/></br>
+<input type="text" placeholder="text3" id ="text3"/></br>
+<input type="text" placeholder="text4" id ="text4"/></br>
+
+<input type="radio" name="lom" id="radioBtnDiv" value="1"> first
+<input type="radio" name="lom" id="radioBtnDiv" value="2"> second</br>
+
+<input type="text" placeholder="text5" id ="text5"/></br>
+<input type="text" placeholder="text6" id ="text6"/></br>
+
+<input type="radio" name="rad" id="yesbtn" value="Yes"> Yes
+<input type="radio" name="rad" id="yesbtn" value="No"> No</br>
+
+<select id="selectval">
+	<option value="ss" >option1</option>
+	<option value="ss1" >option12</option>
+	<option value="ss2" >option3</option>
+	<option>option21</option>
+</select></br></br>
+<input type="text" placeholder="text8" id ="text7"/></br>
+<input type="text" placeholder="text8" id ="text8"/></br>
+
+<input type="radio" name="ss" id="btn" value="Y"> Yes
+<input type="radio" name="ss" id="btn" value="N"> No</br>
+
+</body>
+</html>
